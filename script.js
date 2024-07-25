@@ -64,6 +64,9 @@ Vue.createApp({
         this.audio.pause();
       }
       this.currentIndex = (this.currentIndex - 1) % this.songs.length;
+      if (this.currentIndex <= 0) {
+        return (this.currentIndex = 0);
+      }
       this.playMusic();
       this.isActive = !this.isActive;
     },
