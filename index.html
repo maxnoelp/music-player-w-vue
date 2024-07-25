@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>Music Player with Vue.js</h1>
+        </header>
+        <main>
+            <div class="player">
+                <img id="cover" :src="songs[currentIndex].image" alt="Album Cover" :class="{'rotate_image': isActive}">
+                <p class="songname">{{songs[currentIndex].songname}}</p>
+                <p class="time"> {{ currentTime }}/{{ formatTime(duration) }}</p>
+
+                <div class="buttons">
+                    <button class="skip_forward" @click="nextMusic">Skip</button>
+                    <button class="play" @click="playMusic">Play</button>
+                    <button @click="backMusic">Back</button>
+
+                    <!-- <button @click="pauseMusic">Pause</button> -->
+                </div>
+
+
+            </div>
+        </main>
+        <footer>
+            <div class="icons">
+                <img id="image-size" src="image/free-linkedin-icon-112-thumb.png" alt="">
+                <img id="prinz" src="image/prinz-01 (1).png" alt="">
+                <img id="image-size" src="image/25231.png" alt="">
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
