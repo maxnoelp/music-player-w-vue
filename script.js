@@ -14,6 +14,18 @@ Vue.createApp({
           url: "music/konter-total.mp3",
           image: "image/konter.jfif",
         },
+        {
+          songname: "Blatt vom Kalender",
+          artist: "Raportagen",
+          url: "music/blatt-kalender.mp3",
+          image: "image/raportagen.jpg",
+        },
+        {
+          songname: "Lebewohl, Akira Toriyama",
+          artist: "Anbu Monastir & Animetrix",
+          url: "music/lebewohl.mp3",
+          image: "image/lebewohl-akira.jpg",
+        },
       ],
       currentIndex: 0,
       audio: null,
@@ -53,6 +65,7 @@ Vue.createApp({
     nextMusic() {
       if (this.audio) {
         this.audio.pause();
+        this.currentTime = "0:00"; //timer bei vor und zurück auf 0 setzen
       }
       this.currentIndex = (this.currentIndex + 1) % this.songs.length;
       this.playMusic();
@@ -62,11 +75,13 @@ Vue.createApp({
     backMusic() {
       if (this.audio) {
         this.audio.pause();
+        //timer bei vor und zurück auf 0 setzen
       }
       this.currentIndex = (this.currentIndex - 1) % this.songs.length;
       if (this.currentIndex <= 0) {
         return (this.currentIndex = 0);
       }
+      this.currentTime = "0:00";
       this.playMusic();
       this.isActive = !this.isActive;
     },

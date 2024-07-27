@@ -45,7 +45,7 @@ main {
   border-radius: 100%;
   height: 13rem;
   width: 13rem;
-  margin: 0.75rem;
+  margin-top: 1rem;
 }
 .rotate_image {
   -webkit-animation: rotate 6s linear infinite;
@@ -66,6 +66,10 @@ main {
   color: white;
 }
 
+.artist {
+  margin-top: -1rem;
+}
+
 .time {
   font-size: 1.5rem;
   margin-top: 0rem;
@@ -75,6 +79,7 @@ main {
 .buttons {
   display: flex;
   gap: 0.5rem;
+  margin-top: -0.5rem;
 }
 
 button {

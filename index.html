@@ -17,6 +17,7 @@
             <div class="player">
                 <img id="cover" :src="songs[currentIndex].image" alt="Album Cover" :class="{'rotate_image': isActive}">
                 <p class="songname">{{songs[currentIndex].songname}}</p>
+                <p class="artist">{{ songs[currentIndex].artist }}</p>
                 <p class="time"> {{ currentTime }}/{{ formatTime(duration) }}</p>
 
                 <div class="buttons">
@@ -32,9 +33,12 @@
         </main>
         <footer>
             <div class="icons">
-                <img id="image-size" src="image/free-linkedin-icon-112-thumb.png" alt="">
-                <img id="prinz" src="image/prinz-01 (1).png" alt="">
-                <img id="image-size" src="image/25231.png" alt="">
+                <a href="https://www.linkedin.com/in/max-nölp-18b41a312/" target="_blank"><img id="image-size"
+                        src="image/free-linkedin-icon-112-thumb.png" alt=""></a>
+                <a href="https://www.instagram.com/prinz_tengen/" target="_blank"><img id="prinz"
+                        src="image/prinz-01 (1).png" alt=""></a>
+                <a href="https://github.com/maxnoelp" target="_blank"><img id="image-size" src="image/25231.png"
+                        alt=""></a>
             </div>
         </footer>
     </div>
